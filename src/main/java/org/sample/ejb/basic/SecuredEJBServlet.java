@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 @SuppressWarnings("serial")
 @WebServlet("/SecuredEJBServlet")
-@ServletSecurity(@HttpConstraint(rolesAllowed = "user"))
+@ServletSecurity(@HttpConstraint(rolesAllowed = "guest"))
 public class SecuredEJBServlet extends HttpServlet {
 
     private static String PAGE_HEADER = "<html><head><title>ejb-security</title></head><body>";

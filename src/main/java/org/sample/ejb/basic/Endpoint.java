@@ -22,15 +22,15 @@ public class Endpoint {
     @GET
     public Response get() {
         /**
-         [0m[0m17:53:41,513 INFO  [stdout] (default task-12) Principal's name according to EJB: anonymous
-         [0m[0m17:53:41,514 INFO  [stdout] (default task-12) Principal's name according to Servlet: jpkrohling
-         [0m[0m17:53:41,514 INFO  [stdout] (default task-12) Is user in role 'user'? true
-         [0m[0m17:53:41,514 INFO  [stdout] (default task-12) Is user in role 'admin'? false
+         [0m17:57:55,298 INFO  [stdout] (default task-4) Principal's name according to EJB: quickstartUser
+         [0m[0m17:57:55,299 INFO  [stdout] (default task-4) Principal's name according to Servlet: quickstartUser
+         [0m[0m17:57:55,299 INFO  [stdout] (default task-4) Is user in role 'guest'? true
+         [0m[0m17:57:55,299 INFO  [stdout] (default task-4) Is user in role 'app-user'? false
          */
         System.out.println("Principal's name according to EJB: " + sc.getCallerPrincipal().getName());
         System.out.println("Principal's name according to Servlet: " + request.getUserPrincipal().getName());
-        System.out.println("Is user in role 'user'? " + request.isUserInRole("user"));
-        System.out.println("Is user in role 'admin'? " + request.isUserInRole("admin"));
+        System.out.println("Is user in role 'guest'? " + request.isUserInRole("guest"));
+        System.out.println("Is user in role 'app-user'? " + request.isUserInRole("app-user"));
         return Response.ok().build();
     }
 

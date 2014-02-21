@@ -7,7 +7,7 @@ import javax.ejb.Stateless;
 import java.security.Principal;
 
 @Stateless
-@RolesAllowed({ "user" })
+@RolesAllowed({ "guest" })
 public class SecuredEJB {
 
     // Inject the Session Context
