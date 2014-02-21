@@ -1,0 +1,8 @@
+{
+    "realm": "sample",
+    "resource": "backend",
+    "realm-public-key": "...",
+    "bearer-only" : true,
+    "enable-cors" : true,
+    "use-resource-role-mappings": false
+}
